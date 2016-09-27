@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+
+
+    <color name="loading_bg">#44000000</color>
+    <color name="btn_gray_text">#666666</color>
+    <color name="tv_dark_bg_color">#00a0e9</color>
+    <color name="tv_light_bg_color">#b6dbee</color>
+    <color name="line_gray">#CCCCCC</color>
+    <color name="nav_text_gray">#999999</color>
+    <color name="nav_text_blue">#00B0EF</color>
+
+</resources>

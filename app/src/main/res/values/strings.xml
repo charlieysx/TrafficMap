@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">TrafficMap</string>
+
+    <string name="map">地图</string>
+    <string name="more">更多</string>
+    <string name="car_video">车载视频</string>
+    <string name="mode_normal">普通模式</string>
+    <string name="mode_service">服务区模式</string>
+    <string name="mode_gas">加油站模式</string>
+    <string name="start_point">起点</string>
+    <string name="my_location">我的位置</string>
+    <string name="end_point">终点</string>
+    <string name="tag_on_map">地图上标记的地方</string>
+    <string name="p_search_on_map">请在地图上选择一个终点</string>
+    <string name="search_route">查找路线</string>
+    <string name="nav_simulation">模拟导航</string>
+    <string name="close">关闭</string>
+    <string name="rout_select_title">请选择所需路线，在地图中绘制</string>
+    <string name="dialog_text">加载中...</string>
+</resources>

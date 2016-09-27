@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/mv_map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <include
+        layout="@layout/nav_search"/>
+
+
+    <Button
+        android:id="@+id/btn_stop_guide"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"
+        android:background="@drawable/btn_guide_close_selector"/>
+
+    <Button
+        android:id="@+id/btn_open_nav"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_nav_open_selector"/>
+
+    <include
+        layout="@layout/bg_nav_shadow"/>
+
+    <LinearLayout
+        android:id="@+id/ll_location"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="35dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/ll_location_selector"
+        android:clickable="true"
+        android:gravity="center"
+        android:padding="4dp">
+
+        <ImageView
+            android:id="@+id/iv_location"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/icon_location_selector"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="150dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/ll_zoomin"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@drawable/ll_zoomin_selector"
+            android:clickable="true"
+            android:gravity="center"
+            android:padding="5dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/icon_zoomin_selector"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_zoomout"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@drawable/ll_zoomout_selector"
+            android:clickable="true"
+            android:gravity="center"
+            android:padding="5dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/icon_zoomout_selector"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_map_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        android:clickable="false">
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/lay_mode"
+        layout="@layout/btn_mode"/>
+
+</RelativeLayout>

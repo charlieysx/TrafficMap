@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_mode"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ll_mode_text_gas"
+            style="@style/LL_mode"
+            android:layout_marginBottom="106dp"
+            android:layout_marginRight="75dp"
+            android:background="@drawable/bg_mode_text">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:text="@string/mode_gas"
+                android:textSize="12sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_mode_gas"
+            style="@style/LL_mode"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="100dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/ll_mode_selector"
+            android:clickable="true"
+            android:padding="4dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/icon_mode_gas_2_selector"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_mode_text_service"
+            style="@style/LL_mode"
+            android:layout_marginBottom="176dp"
+            android:layout_marginRight="75dp"
+            android:background="@drawable/bg_mode_text">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:text="@string/mode_service"
+                android:textSize="12sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_mode_service"
+            style="@style/LL_mode"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="170dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/ll_mode_selector"
+            android:clickable="true"
+            android:padding="4dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/icon_mode_service_2_selector"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_mode_text_normal"
+            style="@style/LL_mode"
+            android:layout_marginBottom="246dp"
+            android:layout_marginRight="75dp"
+            android:background="@drawable/bg_mode_text">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:text="@string/mode_normal"
+                android:textSize="12sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_mode_normal"
+            style="@style/LL_mode"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="240dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/ll_mode_selector"
+            android:clickable="true"
+            android:padding="4dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/icon_mode_normal_2_selector"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_switch_mode"
+        style="@style/LL_mode"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/ll_switch_mode_selector"
+        android:clickable="true"
+        android:padding="4dp">
+
+        <ImageView
+            android:id="@+id/iv_mode"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/icon_mode_normal_selector"/>
+
+    </LinearLayout>
+</RelativeLayout>
