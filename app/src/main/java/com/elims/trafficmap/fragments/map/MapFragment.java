@@ -1,6 +1,5 @@
 package com.elims.trafficmap.fragments.map;
 
-import android.app.Dialog;
 import android.graphics.Color;
 import android.graphics.Point;
 import android.os.Bundle;
@@ -18,7 +17,6 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 import com.baidu.mapapi.map.BaiduMap;
-import com.baidu.mapapi.map.InfoWindow;
 import com.baidu.mapapi.map.LogoPosition;
 import com.baidu.mapapi.map.MapStatus;
 import com.baidu.mapapi.map.MapStatusUpdateFactory;
@@ -361,6 +359,7 @@ public class MapFragment extends BaseFragment implements IMap {
         btn_search.setClickable(isShow);
         btn_nav_simulation.setClickable(isShow);
         btn_close_nav_search.setClickable(isShow);
+        showOpenNav(!isShow);
     }
 
     @Override

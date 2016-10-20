@@ -77,17 +77,17 @@ public class ServiceMode extends MapModePresenter {
 
     @Override
     public void setMapClick(LatLng latLng) {
-//        super.setMapClick(latLng);
-//        startLatLng = latLng;
-//        iMap.showDialog("查找5000米内的服务区...", false);
-//        searchRoute.searchNear("服务区", startLatLng, 5000, PoiSortType.distance_from_near_to_far);
-//        Log.i("sm", "click:" + latLng.latitude + "--" + latLng.longitude);
+        //        super.setMapClick(latLng);
+        //        startLatLng = latLng;
+        //        iMap.showDialog("查找5000米内的服务区...", false);
+        //        searchRoute.searchNear("服务区", startLatLng, 5000, PoiSortType.distance_from_near_to_far);
+        //        Log.i("sm", "click:" + latLng.latitude + "--" + latLng.longitude);
     }
 
     @Override
     public void setMapPoiClick(MapPoi mapPoi) {
-//        super.setMapPoiClick(mapPoi);
-//        Log.i("sm", "poiclick:" + endLatLng.latitude + "--" + endLatLng.longitude);
+        //        super.setMapPoiClick(mapPoi);
+        //        Log.i("sm", "poiclick:" + endLatLng.latitude + "--" + endLatLng.longitude);
     }
 
     @Override
@@ -101,6 +101,8 @@ public class ServiceMode extends MapModePresenter {
         }
         if (poiResult.error == SearchResult.ERRORNO.NO_ERROR) {
             Log.i("sm", "结果已得到" + poiResult.getAllPoi().size() + "个结果");
+
+            Toast.makeText(mContext, "有些服务区距离比较近,标签可能重叠,缩小地图视野可看清", Toast.LENGTH_LONG).show();
 
             iMap.getBaiduMap().clear();
 
@@ -129,7 +131,7 @@ public class ServiceMode extends MapModePresenter {
 
             iMap.showDialog("查找该服务区详细信息...", false);
             searchRoute.searchDetail(poi.uid);
-//            Toast.makeText(mContext, poi.name, Toast.LENGTH_SHORT).show();
+            //            Toast.makeText(mContext, poi.name, Toast.LENGTH_SHORT).show();
 
             return true;
         }
@@ -306,7 +308,7 @@ public class ServiceMode extends MapModePresenter {
     @Override
     public boolean moveT() {
 
-        if(route != null) {
+        if (route != null) {
             iMap.updatMyLocation(startLatLng.latitude, startLatLng.longitude, true, 0);
 
             return true;

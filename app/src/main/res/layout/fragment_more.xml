@@ -6,12 +6,6 @@
     android:background="@color/line_gray"
     android:orientation="vertical">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="@string/more"/>
-
     <include
         layout="@layout/bg_nav_shadow"/>
 </LinearLayout>

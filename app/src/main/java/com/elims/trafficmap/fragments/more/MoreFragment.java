@@ -9,7 +9,6 @@ import com.elims.trafficmap.R;
 import com.elims.trafficmap.base.BaseFragment;
 
 /**
- *
  * 服务区activity
  * Created by smile on 2016/9/24.
  */

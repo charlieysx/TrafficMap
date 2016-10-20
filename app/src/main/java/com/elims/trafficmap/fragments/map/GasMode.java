@@ -4,10 +4,7 @@ import android.content.Context;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.baidu.location.BDLocation;
 import com.baidu.mapapi.map.BaiduMap;
-import com.baidu.mapapi.map.MapPoi;
-import com.baidu.mapapi.model.LatLng;
 import com.baidu.mapapi.overlayutil.PoiOverlay;
 import com.baidu.mapapi.search.core.PoiInfo;
 import com.baidu.mapapi.search.core.SearchResult;
@@ -39,6 +36,7 @@ public class GasMode extends ServiceMode {
         }
         if (poiResult.error == SearchResult.ERRORNO.NO_ERROR) {
             Log.i("sm", "结果已得到" + poiResult.getAllPoi().size() + "个结果");
+            Toast.makeText(mContext, "有些加油站距离比较近,标签可能重叠,缩小地图视野可看清", Toast.LENGTH_LONG).show();
 
             iMap.getBaiduMap().clear();
 
