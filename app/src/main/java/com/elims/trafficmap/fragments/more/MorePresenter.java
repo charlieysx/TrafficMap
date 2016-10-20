@@ -10,11 +10,11 @@ import com.elims.trafficmap.base.BasePresenter;
 
 public class MorePresenter extends BasePresenter {
 
-    private IMore serviceArea;
+    private IMore iMore;
 
-    public MorePresenter(Context context, IMore iMap) {
+    public MorePresenter(Context context, IMore iMore) {
         super(context);
-        this.serviceArea = iMap;
+        this.iMore = iMore;
     }
 
 }

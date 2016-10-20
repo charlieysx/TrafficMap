@@ -10,11 +10,11 @@ import com.elims.trafficmap.base.BasePresenter;
 
 public class VideoPresenter extends BasePresenter {
 
-    private IVideo serviceArea;
+    private IVideo iVideo;
 
-    public VideoPresenter(Context context, IVideo iMap) {
+    public VideoPresenter(Context context, IVideo iVideo) {
         super(context);
-        this.serviceArea = iMap;
+        this.iVideo = iVideo;
     }
 
 }
