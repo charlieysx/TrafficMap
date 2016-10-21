@@ -1,6 +1,5 @@
 package com.elims.trafficmap.activity.trafficmapmain;
 
-import android.view.KeyEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -83,5 +82,10 @@ public class TrafficMapMainActivity extends BaseFragmentActivity implements ITra
         //设置当前默认的分页为第一页
         tabHost.setCurrentTab(0);
 
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
     }
 }

@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/tv_light_bg_color"
+    android:background="@color/white"
     android:orientation="vertical">
 
     <LinearLayout
@@ -24,9 +24,9 @@
 
         <ImageView
             android:id="@+id/iv_add_video"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_margin="5dp"
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:padding="10dp"
             android:src="@drawable/ic_mode_normal_unselect"/>
 
     </LinearLayout>

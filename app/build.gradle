@@ -19,6 +19,10 @@ android {
     }
 }
 
+repositories {
+    maven { url "https://jitpack.io" }
+}
+
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
@@ -34,5 +38,6 @@ dependencies {
     compile files('libs/baidumapapi_util_v4_0_0.jar')
     compile files('libs/locSDK_6.13.jar')
     compile 'com.github.bumptech.glide:glide:3.7.0'
-    compile 'fm.jiecao:jiecaovideoplayer:4.7.1_preview'
+//    compile 'fm.jiecao:jiecaovideoplayer:4.6.3'
+    compile 'com.github.waynell:VideoListPlayer:1.3'
 }
