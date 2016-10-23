@@ -75,6 +75,9 @@ public class VideoPresenter extends BasePresenter {
     public void removeVideo(int position) {
         mLists.remove(position);
         mAdapter.notifyDataSetChanged();
+        if (mLists.size() == 0) {
+            iVideo.setEmptyView(true);
+        }
     }
 
     private void add() {
@@ -96,9 +99,10 @@ public class VideoPresenter extends BasePresenter {
         @Override
         public void dispatchMessage(Message msg) {
             super.dispatchMessage(msg);
-            if(mDialog.isShowing()) {
+            if (mDialog.isShowing()) {
                 mDialog.dismiss();
             }
+            iVideo.setEmptyView(false);
             mLists.add(new VideoBean(places[position], "https://git.oschina" +
                     ".net/ysx_xx/videoDownloadTest/raw/master/video/" + url[position] + "" +
                     ".mkv"));

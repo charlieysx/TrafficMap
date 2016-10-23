@@ -31,12 +31,26 @@
 
     </LinearLayout>
 
-    <ListView
-        android:id="@+id/lv_video"
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    </ListView>
+        <ListView
+            android:id="@+id/lv_video"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </ListView>
+
+        <TextView
+            android:id="@+id/tv_empty_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="还没有视频,快点击右上角添加视频吧"/>
+
+    </FrameLayout>
 
     <include
         layout="@layout/bg_nav_shadow"/>

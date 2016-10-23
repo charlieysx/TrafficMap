@@ -17,4 +17,8 @@
     <string name="close">关闭</string>
     <string name="rout_select_title">请选择所需路线，在地图中绘制</string>
     <string name="dialog_text">加载中...</string>
+    <string name="about">关于地图</string>
+    <string name="exit">退出地图</string>
+    <string name="check_update">检查更新</string>
+    <string name="suggestion">意见与反馈</string>
 </resources>

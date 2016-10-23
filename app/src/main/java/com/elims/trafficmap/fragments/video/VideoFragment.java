@@ -9,6 +9,7 @@ import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.elims.trafficmap.App;
 import com.elims.trafficmap.R;
@@ -25,6 +26,7 @@ public class VideoFragment extends BaseFragment implements IVideo, View.OnClickL
     private VideoPresenter mPresenter;
     private ImageView iv_add_video;
     private ListView lv_video;
+    private TextView tv_empty_list;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -42,6 +44,7 @@ public class VideoFragment extends BaseFragment implements IVideo, View.OnClickL
 
         iv_add_video = (ImageView) mView.findViewById(R.id.iv_add_video);
         lv_video = (ListView) mView.findViewById(R.id.lv_video);
+        tv_empty_list = (TextView) mView.findViewById(R.id.tv_empty_list);
 
         iv_add_video.setOnClickListener(this);
         lv_video.setOnItemLongClickListener(this);
@@ -96,6 +99,15 @@ public class VideoFragment extends BaseFragment implements IVideo, View.OnClickL
             }
             App.sInstance.prePosition = -1;
             Log.i("onScroll", firstVisibleItem + "--" + visibleItemCount + "--" + totalItemCount);
+        }
+    }
+
+    @Override
+    public void setEmptyView(boolean is) {
+        if (is) {
+            tv_empty_list.setVisibility(View.VISIBLE);
+        } else {
+            tv_empty_list.setVisibility(View.GONE);
         }
     }
 }
