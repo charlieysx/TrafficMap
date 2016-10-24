@@ -13,9 +13,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/bgcolor_selected"
-        android:gravity="center_vertical"
+        android:gravity="center"
         android:padding="10dp"
-        android:text="停止"
+        android:text="停止连接"
         android:textColor="#aa222222"
         android:textSize="18sp"/>
 
@@ -29,7 +29,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/bgcolor_selected"
-        android:gravity="center_vertical"
+        android:gravity="center"
         android:padding="10dp"
         android:text="全屏显示"
         android:textColor="#aa222222"
@@ -45,9 +45,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/bgcolor_selected"
-        android:gravity="center_vertical"
+        android:gravity="center"
         android:padding="10dp"
-        android:text="@string/close"
+        android:text="关闭弹出框"
         android:textColor="#aa222222"
         android:textSize="18sp"/>
 
