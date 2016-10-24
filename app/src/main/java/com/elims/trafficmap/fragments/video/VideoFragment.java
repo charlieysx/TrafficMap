@@ -1,5 +1,6 @@
 package com.elims.trafficmap.fragments.video;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -13,6 +14,7 @@ import android.widget.TextView;
 
 import com.elims.trafficmap.App;
 import com.elims.trafficmap.R;
+import com.elims.trafficmap.activity.VideoActivity;
 import com.elims.trafficmap.base.BaseFragment;
 
 /**
@@ -109,5 +111,17 @@ public class VideoFragment extends BaseFragment implements IVideo, View.OnClickL
         } else {
             tv_empty_list.setVisibility(View.GONE);
         }
+    }
+
+    @Override
+    public void startFullVideoActivity() {
+        Intent intent = new Intent(getActivity(), VideoActivity.class);
+        startActivityForResult(intent, 0);
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        Log.i("videofragment", "result");
+        mPresenter.resume();
     }
 }

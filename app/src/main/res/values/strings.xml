@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">TrafficMap</string>
+    <string name="app_name">路况一点通</string>
 
     <string name="map">地图</string>
     <string name="more">更多</string>

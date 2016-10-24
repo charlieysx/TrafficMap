@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
-            android:text="关于我们"
+            android:text="功能介绍"
             android:textColor="@color/black"/>
 
         <ImageView

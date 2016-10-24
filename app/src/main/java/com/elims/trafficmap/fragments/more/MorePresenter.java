@@ -10,7 +10,6 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.elims.trafficmap.R;
-import com.elims.trafficmap.activity.aboutmap.AboutMapActivity;
 import com.elims.trafficmap.activity.aboutteam.AboutTeamActivity;
 import com.elims.trafficmap.activity.suggestion.SuggestionActivity;
 import com.elims.trafficmap.base.BasePresenter;
@@ -37,11 +36,6 @@ public class MorePresenter extends BasePresenter {
             case R.id.ll_about_team:
                 Intent intent1 = new Intent(iMore.getActivity(), AboutTeamActivity.class);
                 iMore.getActivity().startActivity(intent1);
-                break;
-
-            case R.id.ll_about:
-                Intent intent2 = new Intent(iMore.getActivity(), AboutMapActivity.class);
-                iMore.getActivity().startActivity(intent2);
                 break;
 
             case R.id.ll_suggestion:

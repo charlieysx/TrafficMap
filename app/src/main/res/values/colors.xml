@@ -17,4 +17,8 @@
     <color name="nav_text_gray">#999999</color>
     <color name="nav_text_blue">#00B0EF</color>
 
+    <color name="silver">#C0C0C0</color>
+    <color name="clr_normal">#88ffffff</color>
+    <color name="clr_pressed">#77b7b7b7</color>
+
 </resources>

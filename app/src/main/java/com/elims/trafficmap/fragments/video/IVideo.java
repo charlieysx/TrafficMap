@@ -6,4 +6,5 @@ package com.elims.trafficmap.fragments.video;
 
 public interface IVideo {
     void setEmptyView(boolean is);
+    void startFullVideoActivity();
 }

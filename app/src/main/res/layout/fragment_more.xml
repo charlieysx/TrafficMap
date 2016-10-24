@@ -14,9 +14,35 @@
         android:text="@string/more"
         android:textColor="@color/white"/>
 
-    <include layout="@layout/more_about_team"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical">
 
-    <include layout="@layout/more_about"/>
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/logo"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:text="路况一点通 1.0.0"
+            android:textColor="@color/nav_text_gray"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="#6d7279"/>
+
+    <include layout="@layout/more_about_team"/>
 
     <include layout="@layout/more_suggestions"/>
 

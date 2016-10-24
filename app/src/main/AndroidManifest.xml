@@ -48,7 +48,7 @@
         </activity>
         <activity android:name=".activity.aboutteam.AboutTeamActivity">
         </activity>
-        <activity android:name=".activity.aboutmap.AboutMapActivity">
+        <activity android:name=".activity.VideoActivity">
         </activity>
 
         <service

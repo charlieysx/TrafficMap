@@ -41,7 +41,7 @@ public class VideoPresenter extends BasePresenter {
     public void init(ListView lv_video) {
         videoListView = lv_video;
         initData();
-        mAdapter = new VideoListAdapter(mContext, mLists);
+        mAdapter = new VideoListAdapter(mContext, mLists, iVideo);
         videoListView.setAdapter(mAdapter);
     }
 
@@ -93,6 +93,10 @@ public class VideoPresenter extends BasePresenter {
                 addHandler.sendEmptyMessage(0);
             }
         }.start();
+    }
+
+    public void resume() {
+        mAdapter.resume();
     }
 
     private Handler addHandler = new Handler() {

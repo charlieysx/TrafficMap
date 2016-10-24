@@ -18,7 +18,6 @@ public class MoreFragment extends BaseFragment implements IMore, View.OnClickLis
 
     private MorePresenter mPresenter;
     private LinearLayout ll_about_team;
-    private LinearLayout ll_about;
     private LinearLayout ll_suggestion;
     private LinearLayout ll_check_update;
     private LinearLayout ll_exit;
@@ -37,13 +36,11 @@ public class MoreFragment extends BaseFragment implements IMore, View.OnClickLis
     private void initWidget() {
         mPresenter = new MorePresenter(this.getActivity(), this);
         ll_about_team = (LinearLayout) mView.findViewById(R.id.ll_about_team);
-        ll_about = (LinearLayout) mView.findViewById(R.id.ll_about);
         ll_suggestion = (LinearLayout) mView.findViewById(R.id.ll_suggestion);
         ll_check_update = (LinearLayout) mView.findViewById(R.id.ll_check_update);
         ll_exit = (LinearLayout) mView.findViewById(R.id.ll_exit);
 
         ll_about_team.setOnClickListener(this);
-        ll_about.setOnClickListener(this);
         ll_suggestion.setOnClickListener(this);
         ll_check_update.setOnClickListener(this);
         ll_exit.setOnClickListener(this);

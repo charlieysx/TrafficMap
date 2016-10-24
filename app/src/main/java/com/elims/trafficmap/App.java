@@ -18,6 +18,9 @@ public class App extends Application {
     public int prePosition = -1;
     public VideoListAdapter.VideoHolder preVideoHolder = null;
     public VideoBean preVideoBean = null;
+    public TextureVideoView fullVideoView = null;
+    public VideoListAdapter adapter = null;
+    public String videoPath = null;
 
     @Override
     public void onCreate() {
