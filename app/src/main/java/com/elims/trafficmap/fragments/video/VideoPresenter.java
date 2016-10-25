@@ -25,8 +25,8 @@ public class VideoPresenter extends BasePresenter {
     private ListView videoListView;
     private List<VideoBean> mLists;
     private VideoListAdapter mAdapter;
-    private String[] places = {"广州塔", "海珠广场", "北京路", "长隆", "步行街"};
-    private String[] url = {"单行的轨道", "泡沫", "睡公主", "我的秘密(钢琴版)", "新的心跳"};
+    private String[] places = {"广州塔", "海珠广场", "北京路", "长隆"};
+    private String[] url = {"车1.mp4", "车2.mp4", "车3.mp4", "车4.mp4"};
     private int position = -1;
     private DialogLoading mDialog;
 
@@ -108,8 +108,7 @@ public class VideoPresenter extends BasePresenter {
             }
             iVideo.setEmptyView(false);
             mLists.add(new VideoBean(places[position], "https://git.oschina" +
-                    ".net/ysx_xx/videoDownloadTest/raw/master/video/" + url[position] + "" +
-                    ".mkv"));
+                    ".net/ysx_xx/videoDownloadTest/raw/master/video/" + url[position]));
             mAdapter.notifyDataSetChanged();
         }
     };

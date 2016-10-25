@@ -148,12 +148,12 @@ public class MapPresenter extends BasePresenter implements View.OnClickListener,
      * 初始定位信息
      */
     private void initLocInfo() {
-//        if (geo == null) {
-//            geo = BitmapDescriptorFactory.fromResource(R.drawable.ic_follow);
-//        }
-//        MyLocationConfiguration configuration = new MyLocationConfiguration(
-//                MyLocationConfiguration.LocationMode.FOLLOWING, true, geo);
-//        mBaiduMap.setMyLocationConfigeration(configuration);
+        //        if (geo == null) {
+        //            geo = BitmapDescriptorFactory.fromResource(R.drawable.ic_follow);
+        //        }
+        //        MyLocationConfiguration configuration = new MyLocationConfiguration(
+        //                MyLocationConfiguration.LocationMode.FOLLOWING, true, geo);
+        //        mBaiduMap.setMyLocationConfigeration(configuration);
         LocationClientOption option = new LocationClientOption();
         //设置定位模式为高精度模式
         option.setLocationMode(LocationClientOption.LocationMode.Hight_Accuracy);
@@ -205,7 +205,7 @@ public class MapPresenter extends BasePresenter implements View.OnClickListener,
                 //定位
                 if (nowModePresenter.isGuiding()) {
                     Toast.makeText(mContext, "导航中...", Toast.LENGTH_SHORT).show();
-                } else if(nowModePresenter.moveT()) {
+                } else if (nowModePresenter.moveT()) {
 
                 } else if (!mLocationClient.isStarted()) {
                     iMap.showDialog("定位中...", false);
@@ -335,7 +335,9 @@ public class MapPresenter extends BasePresenter implements View.OnClickListener,
                 AlertDialog alert = builder.create();
                 alert.show();
                 break;
-
+            case R.id.ll_route:
+                Toast.makeText(mContext, "行车记录", Toast.LENGTH_SHORT).show();
+                break;
             default:
                 break;
         }
@@ -381,9 +383,9 @@ public class MapPresenter extends BasePresenter implements View.OnClickListener,
 
     public void destroy() {
         nowModePresenter.destroy();
-//        if (geo != null) {
-//            geo.recycle();
-//        }
+        //        if (geo != null) {
+        //            geo.recycle();
+        //        }
     }
 
     class MyBaiduSdkReceiver extends BroadcastReceiver {

@@ -46,6 +46,10 @@ public class MapFragment extends BaseFragment implements IMap {
      */
     private LinearLayout ll_location;
     /**
+     * 路段记录
+     */
+    private LinearLayout ll_route;
+    /**
      * 放大地图
      */
     private LinearLayout ll_zoomin;
@@ -186,6 +190,7 @@ public class MapFragment extends BaseFragment implements IMap {
         btn_close_nav_search = (Button) mView.findViewById(R.id.btn_close_nav_search);
         btn_open_nav = (Button) mView.findViewById(R.id.btn_open_nav);
         btn_stop_guide = (Button) mView.findViewById(R.id.btn_stop_guide);
+        ll_route = (LinearLayout) mView.findViewById(R.id.ll_route);
 
         ll_location.setOnClickListener(mPresenter);
         ll_zoomin.setOnClickListener(mPresenter);
@@ -203,6 +208,7 @@ public class MapFragment extends BaseFragment implements IMap {
         btn_close_nav_search.setOnClickListener(mPresenter);
         btn_open_nav.setOnClickListener(mPresenter);
         btn_stop_guide.setOnClickListener(mPresenter);
+        ll_route.setOnClickListener(mPresenter);
 
         et_start_text.setEnabled(false);
         et_end_text.setEnabled(false);
