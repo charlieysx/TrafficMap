@@ -1,5 +1,6 @@
 package com.elims.trafficmap.fragments.map;
 
+import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -24,6 +25,10 @@ import com.baidu.mapapi.model.LatLng;
 import com.elims.trafficmap.R;
 import com.elims.trafficmap.base.BasePresenter;
 import com.elims.trafficmap.utils.searchroute.SearchRoute;
+import com.elims.trafficmap.widgets.AddDialog;
+import com.elims.trafficmap.widgets.RouteDialog;
+
+import static com.bumptech.glide.gifdecoder.GifHeaderParser.TAG;
 
 /**
  * Created by smile on 2016/9/24.
@@ -336,7 +341,20 @@ public class MapPresenter extends BasePresenter implements View.OnClickListener,
                 alert.show();
                 break;
             case R.id.ll_route:
-                Toast.makeText(mContext, "行车记录", Toast.LENGTH_SHORT).show();
+                new RouteDialog((Activity) mContext, new IRouteDialogClick() {
+                    @Override
+                    public void dialogItemClick(View view) {
+                        switch (view.getId()) {
+                            case R.id.tv_add_route:
+                                Log.i(TAG, "添加路段记录");
+                                new AddDialog((Activity) mContext).show();
+                                break;
+                            case R.id.tv_see_route:
+                                Log.i(TAG, "查看路线记录");
+                                break;
+                        }
+                    }
+                }).show();
                 break;
             default:
                 break;
