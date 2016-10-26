@@ -22,11 +22,13 @@ import com.baidu.mapapi.map.MapPoi;
 import com.baidu.mapapi.map.MapStatusUpdateFactory;
 import com.baidu.mapapi.map.MapView;
 import com.baidu.mapapi.model.LatLng;
+import com.elims.trafficmap.App;
 import com.elims.trafficmap.R;
 import com.elims.trafficmap.base.BasePresenter;
 import com.elims.trafficmap.utils.searchroute.SearchRoute;
 import com.elims.trafficmap.widgets.AddDialog;
 import com.elims.trafficmap.widgets.RouteDialog;
+import com.elims.trafficmap.widgets.SeeDialog;
 
 import static com.bumptech.glide.gifdecoder.GifHeaderParser.TAG;
 
@@ -351,6 +353,11 @@ public class MapPresenter extends BasePresenter implements View.OnClickListener,
                                 break;
                             case R.id.tv_see_route:
                                 Log.i(TAG, "查看路线记录");
+                                if (App.sInstance.routeInfos.size() > 0) {
+                                    new SeeDialog((Activity) mContext).show();
+                                } else {
+                                    Toast.makeText(mContext, "暂时没有路线信息,快去添加吧", Toast.LENGTH_SHORT).show();
+                                }
                                 break;
                         }
                     }

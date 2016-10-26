@@ -27,7 +27,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:text="位置:"
+            android:text="当前位置:"
             android:textColor="#aa222222"
             android:textSize="18sp"/>
 
@@ -56,7 +56,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:text="记录:"
+            android:text="信息记录:"
             android:textColor="#aa222222"
             android:textSize="18sp"/>
 

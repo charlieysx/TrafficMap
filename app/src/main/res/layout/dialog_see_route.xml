@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="#ffffff"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/nav_text_blue"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="查看路段记录"
+        android:textColor="@color/white"
+        android:textSize="18sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:background="#eeeeee">
+
+        <ListView
+            android:id="@+id/lv_route_info"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </ListView>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_close"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bgcolor_selected"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="关闭"
+        android:textColor="#aa222222"
+        android:textSize="18sp"/>
+
+</LinearLayout>

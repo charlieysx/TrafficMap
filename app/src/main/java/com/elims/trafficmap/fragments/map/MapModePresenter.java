@@ -16,6 +16,7 @@ import com.baidu.mapapi.search.geocode.ReverseGeoCodeResult;
 import com.baidu.mapapi.search.poi.PoiDetailResult;
 import com.baidu.mapapi.search.poi.PoiResult;
 import com.baidu.mapapi.search.route.DrivingRouteResult;
+import com.elims.trafficmap.App;
 import com.elims.trafficmap.R;
 import com.elims.trafficmap.base.BasePresenter;
 import com.elims.trafficmap.utils.searchroute.ISearchRoute;
@@ -73,6 +74,7 @@ public abstract class MapModePresenter extends BasePresenter implements ISearchR
      * @param location
      */
     public void setLocation(BDLocation location, boolean isGuide) {
+        App.sInstance.nowLatLng = new LatLng(location.getLatitude(), location.getLongitude());
         this.location = location;
         this.startLatLng = new LatLng(location.getLatitude(), location.getLongitude());
         //定位成功,更新地图状态显示面板
@@ -112,10 +114,10 @@ public abstract class MapModePresenter extends BasePresenter implements ISearchR
      * 切换了模式，清除原来的路线终点等信息
      */
     public void clear() {
-        if(route != null) {
+        if (route != null) {
             route = null;
         }
-        if(endLatLng != null) {
+        if (endLatLng != null) {
             endLatLng = null;
         }
     }
@@ -147,6 +149,7 @@ public abstract class MapModePresenter extends BasePresenter implements ISearchR
 
     /**
      * 如果在模拟导航暂停是定位，则定位的位置为导航暂停的位置
+     *
      * @return
      */
     public boolean moveT() {
@@ -196,7 +199,7 @@ public abstract class MapModePresenter extends BasePresenter implements ISearchR
             address = "地图上标记的地方";
             iMap.setText(R.id.et_end_text, address);
 
-            return ;
+            return;
         }
         Log.i("mmp", "坐标查找到结果:" + reverseGeoCodeResult.getAddress());
         address = reverseGeoCodeResult.getAddress();

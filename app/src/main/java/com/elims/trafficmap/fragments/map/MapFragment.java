@@ -25,6 +25,7 @@ import com.baidu.mapapi.map.Marker;
 import com.baidu.mapapi.map.MyLocationData;
 import com.baidu.mapapi.map.OverlayOptions;
 import com.baidu.mapapi.model.LatLng;
+import com.elims.trafficmap.App;
 import com.elims.trafficmap.R;
 import com.elims.trafficmap.base.BaseFragment;
 import com.elims.trafficmap.widgets.DialogLoading;
@@ -232,6 +233,7 @@ public class MapFragment extends BaseFragment implements IMap {
      */
     private void initData() {
         mPresenter.setBaiduMapView(mMapView);
+        App.sInstance.iMap = this;
 
         //设置百度地图Logo在左下角
         mMapView.setLogoPosition(LogoPosition.logoPostionleftBottom);
